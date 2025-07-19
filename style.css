@@ -1,0 +1,221 @@
+:root {
+    --bg: #0c0c28;
+    --accent: #00c6ff;
+    --text: #ffffff;
+    --glow: #ff3cac;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: sticky;
+    top: 0;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
+  
+  .navbar a {
+    margin-left: 1rem;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  .logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: var(--glow);
+    
+  }
+
+  .hero-logo {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    padding-bottom: 8rem;
+    padding-top: 0;
+    
+  }
+
+  .main-logo {
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    padding-top: 0;
+    
+  }
+
+  .csilogo {
+    background-image: url(csilogo.png);
+    background-size: cover;
+    height: 60px;
+    width:120px;
+  }
+  
+  .sieslogo {
+    background-image: url(siesWlogo.png);
+    background-size: cover;
+    height: 60px;
+    width:120px;
+  }
+
+  /* Hero */
+
+  .hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=1920&q=80') center/cover no-repeat;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hero h2.glow {
+    font-size: 4rem;
+    font-family:cursive;
+    color: var(--glow);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px var(--glow);
+    }
+    to {
+      text-shadow: 0 0 20px #ff9a9e;
+    }
+  }
+  
+  .btn {
+    background: var(--glow);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .countdown {
+    padding-top: 2rem;
+    font-size: rem;
+  }
+  
+  
+  /* Sections */
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background: #1b1b3a;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 198, 255, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Contact */
+  .contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: #000;
+    color: #aaa;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  .socials a {
+    margin: 0 0.5rem;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  #scrollTop {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Reveal Animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+  }
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    .columns {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
